@@ -20,7 +20,7 @@ plugins:
         enabled: false
 exclude_patterns:
 - "database/"
-- "Controllers/"
+- "app/Http/Controllers/"
 - "tests/"
 - "spec/"
 - "**/vendor/"
