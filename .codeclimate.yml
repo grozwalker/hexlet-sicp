@@ -15,8 +15,11 @@ plugins:
     config:
       file_extensions:
         - php
+    checks:
+      CleanCode/StaticAccess:
+        enabled: false
 exclude_patterns:
-  - "tests/"
-  - "spec/"
-  - "**/vendor/"
-  - "database/migrations/"
+- "database/"
+- "tests/"
+- "spec/"
+- "**/vendor/"
