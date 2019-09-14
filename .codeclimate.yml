@@ -8,14 +8,19 @@ plugins:
       standard: "./phpcs.xml"
   sonar-php:
     enabled: true
-    tests:
+    tests_patterns:
       - tests/**
   phpmd:
     enabled: true
     config:
       file_extensions:
         - php
+    checks:
+      CleanCode/StaticAccess:
+        enabled: false
 exclude_patterns:
+- "database/"
+- "app/Http/Controllers/"
 - "tests/"
 - "spec/"
 - "**/vendor/"
