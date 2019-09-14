@@ -26,4 +26,3 @@ exclude_patterns:
 - "tests/"
 - "spec/"
 - "**/vendor/"
-- "app/Http/Controllers/"
