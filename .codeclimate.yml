@@ -9,7 +9,7 @@ plugins:
   sonar-php:
     enabled: true
     tests:
-      - tests/**
+      - "tests/**"
   phpmd:
     enabled: true
     config:
