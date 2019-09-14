@@ -1,25 +1,17 @@
 version: "2"
 plugins:
-  phpcodesniffer:
+  rubocop:
     enabled: true
+    channel: "rubocop-0-49"
+    checks:
+      Rubocop/Style/TrailingCommaInLiteral:
+        enabled: false
     config:
-      file_extensions: "php"
-      ignore_warnings: true
-      standard: "./phpcs.xml"
+      file: "alternate-rubocop-path.yml"
   sonar-php:
     enabled: true
-#    checks:
-#      php:S1192:
-#        enabled: false
-    tests:
-      - tests/**
   phpmd:
     enabled: true
-    config:
-      file_extensions:
-        - php
-exclude_paths:
-- "database/"
-- "tests/"
-- "spec/"
-- "**/vendor/"
+exclude_patterns:
+  - "tests/"
+  - "database/"
