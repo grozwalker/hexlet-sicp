@@ -1,5 +1,11 @@
 version: "2"
 plugins:
+  phpcodesniffer:
+    enabled: true
+    config:
+      file_extensions: "php"
+      ignore_warnings: true
+      standard: "./phpcs.xml"
   sonar-php:
     enabled: true
   phpmd:
