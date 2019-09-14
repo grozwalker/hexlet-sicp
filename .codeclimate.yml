@@ -18,7 +18,7 @@ plugins:
     config:
       file_extensions:
         - php
-exclude_patterns:
+exclude_paths:
 - "database/"
 - "tests/"
 - "spec/"
