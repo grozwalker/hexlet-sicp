@@ -8,6 +8,8 @@ plugins:
       standard: "./phpcs.xml"
   sonar-php:
     enabled: true
+    tests:
+      - tests/**
   phpmd:
     enabled: true
     config:
