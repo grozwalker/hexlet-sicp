@@ -3,6 +3,7 @@
 namespace Tests\Feature\Http\Controllers;
 
 use App\User;
+use Auth;
 use Illuminate\Database\Schema\Blueprint;
 use Schema;
 use Tests\TestCase;
@@ -31,6 +32,8 @@ class UserControllerTest extends TestCase
         $user = factory(User::class)->create();
 
         $this->actingAs($user);
+
+        $user = Auth::user();
 
         $response = $this->get(route('users.show', $user->name));
 
