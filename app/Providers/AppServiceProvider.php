@@ -15,7 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         $environment = $this->app->environment();
 
         $isDevEnv = $environment !== 'production';
@@ -37,8 +36,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (config('app.env') === 'production') {
-            URL::forceScheme('https');
-        }
+        //
     }
 }
