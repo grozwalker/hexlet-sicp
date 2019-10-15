@@ -1,8 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>
-        Hexlet SICP
-    </h1>
-    <p>Осилятор СИКП — сервис, в котором есть рейтинг тех, кто проходит сикп, и каждый отмечает что он прошел.</p>
+    <div class="row">
+        <div class="col-4">
+            <img src="/images/sicp_cover.jpg" alt="Sicp cover" class="img-fluid">
+        </div>
+        <div class="col-8">
+            <h1>
+                {{ __('welcome.title') }}
+            </h1>
+            <p>{{ __('welcome.about') }}</p>
+        </div>
+    </div>
 @endsection
